@@ -1,0 +1,27 @@
+
+question("The density of the material in the shape of a cube is determined by measuring three sides of the cube and its mass. If the relative errors in measuring the mass and length are respectively {K}% and {L}%, the maximum error in determining the density is")
+
+ref("EM0266656")
+lm("4,12,45,1017")
+chapter("Experimental Physics")
+dl("4")
+it("70")
+type("Single Choice")
+concept("8006")
+ 
+
+K = select(0.25, 0.5, 0.8, 1, 1.2, 1.5, 2)
+L = select(0.25, 0.5, 0.8, 1, 1.2, 1.5, 2) 
+<<The density of the material in the shape of a cube is determined by measuring three sides of the cube and its mass. If the relative errors in measuring the mass and length are respectively {K}% and {L}%, the maximum error in determining the density is>>
+
+<<The density of a cube is given by rho = M/V>>
+
+<<rho = M/L^3>>
+<<And the error in the measurement of density can be found out from the above formula by the addition of relative errors Hence,  (delta rho)/rho = (delta M)/M + (delta L)/L>>
+concept("8006,8047")
+
+<<The final answer in percentage will be (delta rho)/rho x 100 >>
+
+<< answer = {K+3*L} %>>
+
+

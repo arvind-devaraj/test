@@ -1,0 +1,24 @@
+question("Half-Lives of two radioactive elements A and N are {K} minutes and {L} minutes respectively. Initially, the samples have equal number of nuclei. After {M} minutes the ratio of decayed numbers of A and B nuclei will be")
+ref("EM0135028")
+lm("4,12,45,193")
+chapter("Nuclear Physics and Radioactivity")
+dl("3")
+it("60")
+type("Single Choice")
+concept("7276")
+
+K=select(10, 15, 20, 25, 30, 40, 50)
+L=select(10, 15, 20, 25, 30, 40, 50)
+M = lcm(K, L)
+<< Half-Lives of two radioactive elements A and N are {K} minutes and {L} minutes respectively. Initially, the samples have equal number of nuclei. After {M} minutes the ratio of decayed numbers of A and B nuclei will be >>
+
+<<Half life of a radioactive substance tells us the time after which a given amount of it will get halved. To explain it better, after two half lives, half of the already halved substance will remain, which is one fourth.So if we want to find the amount of substance that has decayed, we subtract the remaining amount from the initial amount>>
+<<Law of radioactive decay, N = N0 x e^(-λt)>>
+<<Half life is given by T1/2 = ln2/λ>>
+concept("7235")
+P = 1-1/(2**(M/K))
+<<Decayed A, {P}>>
+Q = 1-1/(2**(M/L)) 
+<<Decayed B, {Q}>>
+<<ratio is {P/Q} \n>>
+ 

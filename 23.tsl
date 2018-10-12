@@ -1,0 +1,24 @@
+
+question("A {K} V battery with internal resistance {L}Ω and a {M} V battery with internal resistance of  {N}Ω are connected in parallel to a voltmeter (See figure). The reading in the voltmeter would be closed to: ")
+ref("EM0102063")
+lm("4,12,43,180")
+chapter("Current Electricity")
+dl("3")
+it("60")
+type("Single Choice")
+concept("7727")
+
+K =select(5, 10, 15, 20, 25, 30)
+M = select(5, 10, 15, 20, 25, 30) 
+#  K ≠ M
+L =select(0.5, 0.6, 1, 1.2, 1.5, 2)
+N = select(0.5, 0.6, 1, 1.2, 1.5, 2) 
+# L ≠ N
+
+<< A {K} V battery with internal resistance {L}Ω and a {M} V battery with internal resistance of  {N}Ω are connected in parallel to a voltmeter. The reading in the voltmeter would be closed to >>
+
+<<The equivalent emf of the battery combination in given as Equation (E1/r1 + E2/r2)/(1/r1 + 1/r2)>>
+concept("7727,7761,7742")
+
+<<  value is { (K/L + M/N)/(1/L + 1/N) } \n >>
+

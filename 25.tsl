@@ -1,0 +1,20 @@
+
+question("When current in a coil changes from {K} A to {L} A in {M} sec. An average voltage of {N} V is produced. The self-inductance of the coil is:")
+ref("EM0102069")
+lm("4,12,43,182")
+chapter("Electromagnetic Induction and Alternating Current")
+dl("3")
+it("70")
+type("Single Choice")
+concept("9020")
+
+K = select(5, 6, 7, 8, 9, 10, 11,12)
+delta = select(2,3,4)
+L = K+delta
+M = select(0.05, 0.1, 0.2, 0.25, 0.5)
+N = select(50,60,80,100)
+
+<<When current in a coil changes from {K} A to {L} A in {M} sec. An average voltage of {N} V is produced. The self-inductance of the coil is>>
+<<Using d=LI, Δd/Δt = L x ΔI/Δt>>
+concept("9020,8990")
+<< value is {N*M/delta} \n>>

@@ -1,0 +1,21 @@
+question("A body of mass m is moving in a circular orbit of radius R about a planet of mass M. At some instant, it splits into two equal masses. The first mass moves in a circular orbit of radius R*{K}, and the other mass ,in a circular orbit of radius R*{L}. The difference between the final energy and initial energy is:")
+ref("EM0304940")
+lm("4,12,40,164")
+chapter("Gravitation")
+dl("4")
+it("120")
+type("Single Choice")
+concept("9877")
+
+K = select(2/3, 1/2, 3/4, 4/5, 7/8)
+L = select(3/2, 4/3, 5/3, 5/4, 2)
+
+<<A body of mass m is moving in a circular orbit of radius R about a planet of mass M. At some instant, it splits into two equal masses. The first mass moves in a circular orbit of radius R*{K}, and the other mass ,in a circular orbit of radius R*{L}. The difference between the final energy and initial energy is>>
+
+<<The total energy of an orbit (Potential and Kinetic) is given by: -GMm/2R>>
+concept("9869")
+<<Initially the object of mass m is moving in a radius of R. When it splits into two equal parts of m/2 each, the parts move in radii of {K}*R and {L}*R respectively.>>
+<<After this event the final energy of the orbit will be given as: -GM(m/2)/2(R x {K}) - -GM(m/2)/2(R x {L})>>
+
+P= 1/4*(K+L)/(K*L) - 1
+<<We are required to find the difference in these two energy values which will be given by:  {-P}* GMm/R \n>>

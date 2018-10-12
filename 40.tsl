@@ -1,0 +1,30 @@
+question("An ideal capacitor of capacitance {K} µF is charged to a potential difference of {L}V. The charging battery is then disconnected. The capacitor is then connected to an ideal inductor of self inductance {M} mH. The current at a time when the potential difference across the capacitor is {N} V is:")
+
+ref("EM0304952")
+lm("4,12,43,182")
+chapter("Electromagnetic Induction and Alternating Current")
+dl("4")
+it("60")
+type("Single Choice")
+concept("9049")
+
+K = select(0.1, 0.2, 0.3, 0.4, 0.5)
+L = select(5, 10, 15, 20)
+M = select(0.2, 0.5, 0.8, 1)
+P = select(2,3,4)
+N = L - P
+<<An ideal capacitor of capacitance {K} µF is charged to a potential difference of {L}V. The charging battery is then disconnected. The capacitor is then connected to an ideal inductor of self inductance {M} mH. The current at a time when the potential difference across the capacitor is {N} V is>>
+<<Energy stored in a capacitor E = (1/2)x CV^2>>
+concept("7904")
+<<Here the Capacitance is {K} muF and it is charged to a potential of {L} V >>
+<<Hence the energy will be E = (1/2)xKL^2>>
+<<The capacitor is now connected to an inductor and the system becomes L-C circuit. In the LC circuit, energy oscillates between the capacitor and inductor such that the total energy remains conserved.>>
+<<The Inductance that is added is Inductance {M}mh>>
+<<We need to calculate the current when the potential across the capacitor becomes {N} volt>>
+<<Conserving Energy, we get (1/2)xC(V1)^2 + (1/2)xL(i1)^2 = (1/2)xC(V2)^2 + (1/2)xL(i2)^2>>
+concept("8516,9090")
+<<The value of initial current is 0>>
+
+Q =  (K*L**2 - K*N**2)/ M
+
+<<And the value of final current is found out to be sqrt{Q}>>  

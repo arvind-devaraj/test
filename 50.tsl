@@ -1,0 +1,13 @@
+question("A signal of frequency {Q}kHz and peak voltage of {R}Volt is used to modulate a carrier wave of frequency {S} MHz and peak voltage {T} Volts. Find Modulation index and side frequency bands respectively")
+
+Q = select(10, 20, 30, 40, 50)
+R = select(2, 3, 4, 5, 6, 7, 8, 9, 10)
+S = select(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+T = select(10, 12, 14, 16, 18, 20)
+
+P = R/T
+
+U = (S*1000)-Q
+V = (S*1000)+Q
+
+<<Modulation index = {P}, side frequency bands are at {U} kHz and {V} kHz >>

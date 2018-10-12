@@ -1,0 +1,35 @@
+
+
+question("At what height {h} gravitational potential is {V} and acceleration due to gravity is {g1}. Take radius of earth to be {R} ")
+ref("neet2016,87,3") 
+lm("4,27,40,164")
+chapter("Gravitation")
+dl("3")
+it("45")
+type("Single Choice")
+concept("9857")
+#V = -5.4e7
+#g = 6.0
+#R = 6400e3 
+
+V = choose(-5.4e7,-10e7)
+g1 = choose(6,9)
+R = 6400e3
+
+<<At what height {h} km gravitational potential is {V} J kg^-2 and acceleration due to gravity is {g1} ms^-2. Take radius of earth to be 6400 km>>
+
+<<Gravitational potential at some height h from the surface of the earth is given by V = -(GM)/(R+h)>>
+concept("9857")
+
+<<And acceleration due to gravity at some height h from the surface of earth is g1 = (GM)/(R+h)^2>>
+concept("9916")
+
+<<From the equations of Gravitational potential and acceleration due to gravity, |V|/g1 = R+h>>
+
+<< input params are Gavitational potential ={V} , Radius = 6400 km, Acceleration due to gravity = {g1}>>
+
+<<Solve for h using |V|/g1 = R+h>>
+
+solve h using R+h = abs(V/g1)
+
+<< height is {value.h} \n>>

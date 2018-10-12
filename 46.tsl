@@ -1,0 +1,10 @@
+question("There is a uniform electrostatic field in a region. The potential at various points on a small sphere centred at P, in the region, is found to vary between the limits {Q} to {R} . What is the potential at a point on the sphere whose radius vector makes an angle of {S} with the direction of the field.")
+
+Q = select(589, 590, 591, 592)
+T = select(0.1, 0.2 ,0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)
+S = select(30, 45, 60)
+R = Q+T
+
+P = (R-Q) * cos(S*3.14/180)
+<<{P+Q}>>
+

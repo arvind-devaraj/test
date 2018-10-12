@@ -1,0 +1,5 @@
+question("A radioactive nucleus A with a half life T decays into a nucleus N. At t=0, there is no nucleus B. At some time t, the ratio of the number of B to that of A is {K}. Then, t is given by:")
+
+K = select(0.1, 0.2, 0.3, 0.4, 0.5 , 0.6, 0.7,0.8)
+
+<<  T*log(2)/log({1+K})>>

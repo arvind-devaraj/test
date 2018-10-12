@@ -1,0 +1,33 @@
+
+question("A particle of mass {m} moves along circle of radius {r} with constant tangential acceleration What is the magnitute of this acceleration if kinetic energy of the particle becomes equal to {energy} by end of {num} revolutions after beginning of motion")
+
+ref("Arihant NEET 31 years chapterwise solutions, 50, 4") 
+lm("4,12,39,160")
+chapter("Work, Power and Energy")
+dl("4")
+it("80")
+type("Single Choice")
+concept("8858")
+
+energy = choose(6e-4, 8e-4)
+m = 0.01
+num = 2
+r = 6.4e-2
+
+<< A particle of mass {m} moves along circle of radius {r} with constant tagential acceleration What is the magnitute of this acceleration if kinetic energy of the particle becomes equal to {energy} by end of {num} revolutions after beginning of motion>>
+
+S = num*2*3.14*r
+
+<< Solving for Kinetic energy using E = 1/2*m*v*v>>
+concept("8858")
+
+solve v using energy = 1/2*m*v*v
+
+<< We find velocity as {value.v} >>
+<<Initial velocity of the particle is 0 m/s, because it's starts from rest as given in the question>> 
+
+<<From third law of motion, v*v = u*u + 2*a*s >>
+concept("9614")
+solve a using v*v = 2*a*S
+
+<< We find acceleration as {value.a} \n>>

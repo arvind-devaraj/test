@@ -1,0 +1,26 @@
+
+question("The acceleration due to gravity on the surface of moon is {g2} m/s2. What is the time period of a simple pendulum on the surface of moon, if its time period on the surface of earth is {t1} s?")
+
+ref("NCERT solutions physics class 11th, 391,15") 
+lm("4,12,40,165")
+chapter("Oscillations (SHM)")
+dl("3")
+it("45")
+type("Single Choice")
+concept("8936")
+
+g1 = 9.8
+g2 = choose(1.600,1.700)
+t1 = choose(1.0, 10.0)
+
+<<The acceleration due to gravity on the surface of moon is {g2} m/s2. What is the time period of a simple pendulum on the surface of moon, if its time period on the surface of earth is {t1} s>>
+<<Let ge and gm are acceleration due to gravities on earth and moon respectively>>
+<<Time period on earth, Te = 2 x 3.14 x (l/ge)^1/2>>
+<<Time period on moon, Tm = 2 x 3.14 x (l/gm)^1/2>>
+concept("8936")
+<<If we divide equation 1 with equation 2, then Te^2 = (ge/gm) x Tm^2>>
+
+solve t2 using t2*t2 = (g1/g2) * (t1*t1)
+
+<< time period is {value.t2} \n>>
+

@@ -1,0 +1,24 @@
+
+question("A {K} cm long solenoid has radius {L} cm and {M} total number of turns. It carries a current of {N} A. If it is equivalent to a magnet of the same size and magnetization M vector [Magnetic Moment/volume] Then |M vector| is")
+ref("EM0102082")
+lm("4,12,43,181")
+chapter("Magnetic Effects of Current")
+dl("3")
+it("70")
+type("Single Choice")
+concept("9025")
+
+K = select (20, 25, 30, 40, 50)
+L = select (1, 2, 3, 4, 5)
+M = select (200, 300, 400, 500, 600)
+N = select (5, 10, 12, 15, 20)
+
+<<A {K} cm long solenoid has radius {L} cm and {M} total number of turns. It carries a current of {N} A. If it is equivalent to a magnet of the same size and magnetization M vector [Magnetic Moment/volume] Then |M vector| is>>
+<<Using Magnetization = Magnetic moment/Volume>>
+concept("9278,9232")
+<<Magnetization = no of turns x current x area / Volume>>
+<<Magnetization = NI/L>>
+concept("9025")
+
+<<Magnetization is {M*N*100/K} A m^-1 \n>>
+

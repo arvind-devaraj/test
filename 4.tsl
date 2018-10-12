@@ -1,0 +1,42 @@
+
+question("A hill is {h}m high. Supplies are sent using a canon that can hurl packets at 125 m/s . The canon is located at distance of {dist_canon}m from foot of hill and can be moved on ground at a speed of {speed_canon}m/s, so that its distance from the hill can be adjusted. What is the shortest time in which a packet can reach on the ground across the hill . Take g=10m/s^2 ")
+ref("NCERT Solutions 11th, 108, 9") 
+lm("4,12,39,157")
+chapter("Motion in Two Dimension and Projectile Motion")
+dl("6")
+it("120")
+type("Single Choice")
+concept("8097")
+
+h = choose(500,800)
+g = 10
+dist_canon = choose(800,1000)
+speed_canon = 2
+u = 125
+
+<< A hill is {h}m high. Supplies are sent using a canon that can hurl packets at 125 m/s . The canon is located at distance of {dist_canon}m from foot of hill and can be moved on ground at a speed of {speed_canon}m/s, so that its distance from the hill can be adjusted. What is the shortest time in which a packet can reach on the ground across the hill . Take g=10m/s^2 >>
+<<If uy, ux are vertical and horizontal compontents of velocity u, then u^2 = ux^2 + uy^2>>
+<<To cross the hill, the vertical component of the velocity should be sufficient to cross such height, uy greater than or equal to (2gh)^(1/2) >>
+uy = sqrt(2*g*h)
+
+solve ux using u*u = ux*ux + uy*uy
+
+<< Solving for horizontal velocity ux we get the value as {value.ux} >>
+
+time_top = sqrt(2*h/g)
+concept("8097")
+<<Time taken to reach top of the hill is {time_top}>>
+<<Time taken to reach the ground from top of the hill is equal to taken to reach top from ground>>
+time_ground = time_top
+
+horiz_dist = value.ux * time_top
+<<Horizontal distance travelled in {time_top} is ux * time to reach top, {horiz_dist}>>
+delta_canon = dist_canon - horiz_dist
+<<Distance through which canon has to be moved, {dist_canon} - {horiz_dist} = {delta_canon}>>
+time_canon = delta_canon / speed_canon
+<<Speed with which canon can move = {speed_canon} m/s>>
+<<Time taken by canon is Distance travelled by canon divided by speed of the canon, {time_canon}>>
+
+time_total = time_canon + time_top + time_ground
+
+<< time is {time_total} \n>>

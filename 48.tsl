@@ -1,0 +1,9 @@
+question("The energy stored in the electric field produced by a metal sphere is {Q}J. If the sphere contains {R} x 10^(-6)C charge, its radius will be : [ Take: 1/(4 x pi x epsilon) = 9 x 10^{9}N-m^{2}/C^{2}]")
+
+Q = select(1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5)
+R = select(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
+P = 9 * (R*R)/(2*Q)
+
+<<{P} mm>>

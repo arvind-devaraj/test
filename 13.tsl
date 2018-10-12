@@ -1,0 +1,36 @@
+
+question("A {L}H inductor is placed in series with {R} ohm resistor and emf of {V} V is suddenly applied to the combination. At {T} s after start, find the rate at which energy is stored in the magnetic field around the inductor (e^-0.5 = 0.61)")
+ref("ISC Physics 12th,509,7")
+lm("4,12,43,182")
+chapter("Electromagnetic Induction and Alternating Current")
+dl("5")
+it("120")
+type("Single Choice")
+concept("9084")
+
+e = 2.718
+L = choose(1,10)
+R = choose(5,30)
+V = choose(10, 40) 
+V= V* 50
+#V is multiple of 50 
+T = choose(0.1,5.0)
+
+<<A {L}H inductor is placed in series with {R} ohm resistor and emf of {V} V is suddenly applied to the combination. At {T} s after start, find the rate at which energy is stored in the magnetic field around the inductor (e^-0.5 = 0.61)>>
+<<The final steady current can be calculated, i0 = V / R>>
+concept("7742")
+i0 = V / R
+<<Final steady current is {i0} A>>
+k = R/L
+i = i0*(1-e**(-k*T))
+<<Current at any instant t in an L-R circuit is, i =  i0[1-e^(R/L)t]>>
+concept("9084")
+<<Current in L-R circuit after {T} sec is {i} A>>
+
+<<The instanteneous energy in the magnetic field around an inductor L carrying instanteneous current i is U = 0.5 * L * i * i>>
+concept("9090")
+
+<<Differentiate the above equation for rate of energy stored, E = i * R * (i0-i) >>
+E = i * R * (i0-i)
+<< rate of energy stored is: {E} W \n>>
+

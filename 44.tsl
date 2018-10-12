@@ -1,0 +1,6 @@
+question("A projectile is given an initial velocity of ({K}i + {L}j) m/s, where unit vector i is along the horizontal and unit vector j is along vertical. If g = 10m/s^2, the equation of its trajectory is:")
+
+K = select(1, 2, 3, 4, 5, 6)
+L = select(1, 2, 3, 4, 5, 6)
+
+<<y = {L/K}x - 5x^2>>

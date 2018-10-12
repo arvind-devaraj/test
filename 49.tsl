@@ -1,0 +1,11 @@
+question("The ratio of maximum acceleration to maximum velocity in a simple harmonic motion is {Q}s^{-1}. At, t=0 the displacement is {R}m. What is the maximum acceleration? The initial phase is {S}.")
+
+Q = select(2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+R  = select(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+S = select(90, 60, 45, 30)
+
+P =  Q*2*(R/sin(S*3.14/180))
+
+<< {P} m/s^(2) >>

@@ -1,0 +1,19 @@
+question("One mole of an ideal gas is compressed isothermally in a rigid vessel to increase its pressure {K} times at room temperature, 27°C.The work done on the gas will be:")
+
+ref("EM0304947")
+lm("4,12,42,174")
+chapter("Laws of Thermodynamics")
+K = select(2, 2.5, 3, 3.5, 4)
+dl("4")
+it("60")
+type("Single Choice")
+concept("9781")
+
+<<One mole of an ideal gas is compressed isothermally in a rigid vessel to increase its pressure {K} times at room temperature, 27°C.The work done on the gas will be>>
+<<The work done on an ideal gas in an isothermal process is given by: W=nRT x ln (pf/pi)>>
+concept("9781")
+<<Here T is the temperature in Kelvin, which is T= 27+273 = 300 K>>
+concept("10403")
+<<The gas is compressed to a pressure {K} times the initial pressure. Here Pf and Pi are initial and final pressures respectively. In this case the value will become : W = R x 300 x ln(K)>>
+concept("9756")
+<<W =  300*R*ln({K}) >>

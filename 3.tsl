@@ -1,0 +1,28 @@
+
+question("A potentiometer wire has length {len} metres and resistance {R} ohm. The resistance rho that must be connected in series with wire and an accumulator of emf {V} volts so as to get a potential gradient of {pd} mV per cm on wire ")
+ref("Random") 
+lm("4,12,43,180")
+chapter("Current Electricity")
+dl("3")
+it("45")
+type("Single Choice")
+concept("7749")
+
+len = choose(1,5)
+#len is integer  
+R = choose(1,8)
+#R is integer
+pg = choose(1e-1,10e-1)
+V = choose(2,10)
+#V is integer 
+
+<<A potentiometer wire has length {len} metres and resistance {R} ohm. The resistance{rho} that must be connected in series with wire and an accumulator of emf {V} volts so as to get a potential gradient of {pd} mV per cm on wire >>
+
+<<Potential(V1) for given length of potentiometer is length x potential gradient>>
+concept("7749")
+delV = len*pg
+<<Lets say Rs is connected in series with potentiometer, V1 = V*R/(R+Rs)>>
+concept("7728")
+solve RS using delV = (V*R)/(R+RS)
+
+<< Resistance in series is {value.RS} \n>>

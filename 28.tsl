@@ -1,0 +1,26 @@
+
+question("Two batteries with e.m.f. {K} V and {L} V are connected in parallel across a load resistor of {P} Ω. The internal resistances of two batteries are {M} Ω and {N} Ω respectively. The voltage across the load lies between")
+
+ref("EM0266650")
+lm("4,12,43,180")
+chapter("Current Electricity")
+dl("4")
+it("75")
+type("Single Choice")
+concept("7737")
+
+K = select(10, 12, 14, 16, 18, 20, 22, 24)
+L = select(10, 12, 14, 16, 18, 20, 22, 24)
+# K ≠ L
+
+M= select(1/2, 1/3, 3/4, 1, 5/4, 1.5, 7/4)
+N =select(1/2, 1/3, 3/4, 1, 5/4, 1.5, 7/4)
+#  M ≠ N
+
+P =select( 5, 10, 15, 20)
+<<Two batteries with e.m.f. {K} V and {L} V are connected in parallel across a load resistor of {P} Ω. The internal resistances of two batteries are {M} Ω and {N} Ω respectively. The voltage across the load lies between>>
+<<Using kirchhoff's current law, V−12/1 + V−13/2 + V/10 = 0 >>
+concept("7737,7735,7727")
+
+solve V using V/M + V/N + V/P = K/M + L/N
+<< Volatge across the load is {value.V} \n>>

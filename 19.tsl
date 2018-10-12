@@ -1,0 +1,18 @@
+
+question("Radiation of λ, is incident on a photocell. The fastest emitted electron has speed v. If the Wavelength is changed to {K}λ, the speed of the fastest emitted electron would be")
+ref("EM0135017")
+lm("4,12,45,195")
+chapter("Photoelectric Effect and Electromagnetic Waves")
+dl("3")
+it("60")
+type("Single Choice")
+concept("7475")
+ 
+K=select(2/3, 3/4, 2/5, 3/7, 4/9, 2/5, 5/12, 4/11, 2/7, 7/12, 8/17, 3/11)
+<<Radiation of λ, is incident on a photocell. The fastest emitted electron has speed v. If the Wavelength is changed to {K}λ, the speed of the fastest emitted electron would be>>
+<<Using the photoelectric equation, 1/2 x mv^2 = hc/λ - ϕ>>
+concept("7475,7459,7603,7433")
+t =  str(Fraction(1/K))
+<< v*sqrt({t}) \n>> 
+
+

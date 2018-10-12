@@ -1,0 +1,18 @@
+question("The number of amplitude modulated broadcast stations that can be accommodated in a {K}  kHz bandwidth for the highest modulating frequency {L} KHz will be:")
+
+ref("EM0304951")
+lm("4,12,45,197")
+chapter("Semiconductors and Communication System")
+dl("4")
+it("45")
+type("Single Choice")
+concept("8404")
+
+K = select(250, 300, 350, 400, 450, 500)
+L = select(10, 15, 20, 25)
+<<The number of amplitude modulated broadcast stations that can be accommodated in a {K}  kHz bandwidth for the highest modulating frequency {L} KHz will be>>
+<<If modulating frequency is {L} KHz then band width for one channel is 2 x {L} KHz>>
+concept("8461")
+<<No of channels can accommodate = Total band width/band width for one channel >>
+concept("8414")
+<< {(K/2)* L}>>

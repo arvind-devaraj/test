@@ -1,0 +1,27 @@
+
+question("The mass of a hydrogen molecule is 3.32 * 10^-27 Kg. If 10^{K} hydrogen molecules strike per second, on a fixed wall of area {L} cm^2 at an angle of {M}° to the normal, and rebound elastically with a speed of 10^{N} m/s, then the pressure on the wall is nearly")
+ref("NA")
+lm("4,12,40,162")
+chapter("Center of Mass and Momentum Conservation (Collision)")
+dl("3")
+it("60")
+type("Single Choice")
+concept("9661")
+ 
+K =select( 20, 21, 22, 23, 24,25 )
+L =select( 1, 2, 3, 4, 5)
+M =select( 30, 45, 60)
+N =select( 2, 3, 4)
+pi = 3.1415
+
+<< The mass of a hydrogen molecule is 3.32 * 10^-27 Kg. If 10^{K} hydrogen molecules strike per second, on a fixed wall of area {L} cm^2 at an angle of {M}° to the normal, and rebound elastically with a speed of 10^{N} m/s, then the pressure on the wall is nearly >>
+<<Change in momentum of one hydrogen molecule is given by, P=2mVcos(theta)>>
+concept("9583")
+<<Force is calculated by change in momentum per unit time. Hence the above relation can be multiplied by the number of atoms striking per unit time 10^{K} to calculate force>>
+<<F=2mnVcostheta>>
+<<Here the striking angle is {M} degrees and the striking velocity V is 10^{N} m/s>>
+<<Pressure due to this force is given by:P=F/A>>
+concept("9661,7493")
+<<  {2*3.32 * 10**(K-27) * 10**(N)* cos(M*pi/180)/(L*(10**4))} >> 
+
+ 

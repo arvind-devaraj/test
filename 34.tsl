@@ -1,0 +1,21 @@
+question("Two engines pass each other moving in opposite directions with uniform speed of {K) m/s.One of them is blowing a whistle of frequency {L} Hz. Calculate the frequency heard by the driver of second engine before they pass each other. Speed of sound is 330 m/s:")
+
+ref("EM0135552")
+lm("4,12,41,170")
+chapter("Waves and Sound")
+dl("3")
+it("60")
+type("Single Choice")
+concept("11935")
+
+K = select(20, 30, 40, 50)
+L = select(500, 540, 560, 600, 720)
+
+<<Two engines pass each other moving in opposite directions with uniform speed of {K) m/s.One of them is blowing a whistle of frequency {L} Hz. Calculate the frequency heard by the driver of second engine before they pass each other. Speed of sound is 330 m/s>>
+<<Doppler’s Effect for source and observer moving in opposite directions is given by, f1 = f((v+v0)/(v-vs))>>
+concept("11935,11918")
+<<where f1 is the frequency observed by observer and f is the frequency given by source {L}. v0 is observed s speed ={K} m/s and vs is the source velocity ={K} m/s>>
+<<Hence f1= (330+{K})/(330-{K}) x {L}>>
+F= (330 + K) * L/(330 - K)
+
+<< {F} Hz >>

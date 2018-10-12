@@ -1,0 +1,18 @@
+
+question("Double-convex lenses are to be manufactured from a glass of refractive index {mu}, with both faces of the same radius of curvature. What is the radius of curvature required if the focal length is to be {f} cm ")
+ref("NCERT Physics solutions 12th,220,7")
+lm("4,12,44,1008")
+chapter("Ray Optics")
+dl("3")
+it("60")
+type("Single Choice")
+concept("7144")
+
+f = choose(20,40)
+mu = choose(1.55,1.85)
+<<Double-convex lenses are to be manufactured from a glass of refractive index {mu}, with both faces of the same radius of curvature. What is the radius of curvature required if the focal length is to be {f} cm>>
+<<Double convex lens od same radius on both sides, R1 = R, R2 = -R >>
+<<Use Lens makers formula,  1/f = (mu - 1) *(2/R)>>
+concept("7144")
+solve R using 1/f = (mu - 1) *(2/R)
+<< Radius of curvature is {value.R} \n >>

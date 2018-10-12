@@ -1,0 +1,31 @@
+
+question("A stone dropped from the top of a tower of height {h} m high splashes into the water of a pond near the base of the tower. When is the splash heard at the top given that the speed of sound in air is 340 m/s ?")
+
+ref("NCERT solutions physics class 11th, 426,2") 
+lm("4,12,41,170")
+chapter("Waves and Sound") 
+dl("3")
+it("60")
+type("Single Choice")
+concept("9614")
+
+h = choose(100,500)
+v = 340
+g = 9.8
+u = 0
+
+<<A stone dropped from the top of a tower of height {h} m high splashes into the water of a pond near the base of the tower. When is the splash heard at the top given that the speed of sound in air is 340 m/s>>
+<<Time taken by the stone to reach the surface of the water after drop plus time taken by the sound wave to reach the ear is the total time>>
+<<Let t1 and t2 are time taken by stone to reach the pond and time taken by sound to reach the top of the tower respectively>>
+<<Using equation of motion, h = ut+ (1/2)gt1^2>> 
+concept("9614")
+solve t1 using h = u*t1 + (g*t1*t1)/2
+<<t1 = {t1}>>
+t2 = h/v
+<<Time taken by sound to reach the top of tower t2 = h/v>> 
+concept("13789")
+<<t2 = {t2}>>
+t = value.t1 + t2
+<<Total time taken is equal to t1+t2>>
+<< time taken = {t} \n >>
+

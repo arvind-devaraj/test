@@ -1,0 +1,29 @@
+
+question("A spring balance has a scale that reads from {m1} to {m2} kg. The length of the scale is {x} m. A body suspended from this balance, when displaced and released, oscillates with a period of {T} s. What is the weight of the body?")
+
+ref("NCERT solutions physics class 11th,382,8") 
+lm("4,12,40,165")
+chapter("Oscillations (SHM)")
+dl("5")
+it("100")
+type("Single Choice")
+concept("10024")
+pi = 3.1415
+g = 9.8 
+m1 = 0
+m2 = choose(1,100)
+x = choose(0.08,0.2)
+T = 0.1
+
+<<A spring balance has a scale that reads from {m1} to {m2} kg. The length of the scale is {x} m. A body suspended from this balance, when displaced and released, oscillates with a period of {T} s. What is the weight of the body?>>
+<<This is the application of oscillation of a loaded spring. The parameters required are to be determined from the given conditions>>
+<<As the length of the scale is {x} m and it can read upto {m2} kg, the maximum extension of {x} m will correspond to maximum weight of {m2} x {x}>>
+<<We can calculate spring constant k using, F = -kx>>
+concept("10024")
+solve F using F = (m2)*g
+solve k using F = k*x
+solve m using T*T = 4*(pi)*(pi)*m/k
+<<We have for loaded oscillation, T = 2(pi) x sqrt(m/k)>>
+concept("10007")
+solve w using w = m*g
+<< mass is {m2} length is {x} , weight is {value.w} \n>>

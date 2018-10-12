@@ -1,0 +1,14 @@
+question("A copper ball of mass {K} gm is at a temperature T. It is dropped in a copper calorimeter of mass {L} gm, filled with {M} gm of water at room temperature. Subsequently, the temperature of the system is found to be {N}°C. T is: (Given: room temperature = {P}°C, specific heat of copper = 0.1  \frac{cal}{gm°C})")
+
+K = select(50, 100, 200, 300, 400, 500)
+L = select(50, 100, 200, 300, 400, 500)
+Q = select(30, 50, 60, 80)
+
+M = L + Q
+N = select(60, 70, 80)
+P = select(24,25,26,27,28,29,30)
+
+solve T using K * 0.1 * (T-N) = (L*0.1*(N-P)) + (M*(N-P))
+
+<<{value.T}°C>>
+

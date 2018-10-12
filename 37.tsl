@@ -1,0 +1,20 @@
+question("An automobile travelling at {K} Km/h, can be stopped at a distance of (L) m by applying brakes. If the same automobile is travelling at {M} Km/h, the stopping distance in meters, is (Assume no skidding):")
+
+ref("EM0304948")
+lm("4,12,39,156")
+chapter("Motion in One Dimension")
+dl("4")
+it("60")
+type("Single Choice")
+concept("9614")
+
+K = select(10, 20, 30, 40, 50, 60, 70, 80 ,90, 100)
+M = select(10, 20, 30, 40, 50, 60, 70, 80 ,90, 100)
+L = select(40,80)
+
+<<An automobile travelling at {K} Km/h, can be stopped at a distance of (L) m by applying brakes. If the same automobile is travelling at {M} Km/h, the stopping distance in meters, is (Assume no skidding)>>
+<<The stopping distance of an object moving with a speed vand slowing down with a constant retardation a is given by: S = u^2/2a>>
+concept("9614")
+<<Hence for the same value of acceleration it can be said that :  S is directly proportional to u^2>>
+<<In the Given situation, the speed v is {K}Km/h and it’s stopping distance is {L} m . We want to find out how much is the stopping distance if the speed is {M}Km/h. We can do so using the above proportionality relationship: S1/S2 = (u1)^2/(u2)^2>>
+<<Substituting the values, we get the following answer, {(M/K)**2 * L }m >>

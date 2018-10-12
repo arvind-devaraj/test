@@ -1,0 +1,43 @@
+
+question("The rear side of a truck is open and a box of {m1} kg mass is placed {d} m away from open end. The coefficient of friction between box and surface below is {f}. On a straight road the truck starts from rest and accelerated with {a} m/s^2. At what distance from the starting point does the box fall off the truck?Ignore the size of the box")
+ref("NCERT Physics solutions 11th,140,36")
+lm("4,12,39,158")
+chapter("Newton's Laws of Motion")
+dl("6")
+it("150")
+type("Single Choice")
+concept("10121")
+
+m1 = choose(10, 80)
+d = choose(3,5)
+f = choose(0.10, 0.60)
+a = choose(4,8)
+u = 0
+g = 9.8
+
+<< The rear side of a truck is open and a box of {m1} kg mass is placed {d} m away from open end. The coefficient of friction between box and surface below is {f}. On a straight road the truck starts from rest and accelerated with {a} m/s^2. At what distance from the starting point does the box fall off the truck?Ignore the size of the box >>
+
+F = m1*a
+<<Force applied by the truck on the box due to its accelerated motion, F = ma>>
+concept("9493")
+<<F = {F}>>
+Ff = f*m1*g
+<<Due to reaction force on the box, the box tries to move in backward direction but limiting friction force opposes it's motion>>
+<<Limiting friction force between box and the surface is F1 = (mu)xmg>>
+concept("10121")
+<<F1 = {Ff}>>
+Fn = F - Ff
+<<Net force acting on box in backward direction is F - F1>>
+<<Net force = {Fn}>>
+a1 = Fn/m1
+<<Acceleration produced in the box in backward direction is Net force divided by mass>>
+<<Acceleration of box = {a1}>>
+solve t using d = u*t + 0.5*a1*t*t
+<<Using the equation of motion, s = ut + 0.5at^2, we can calculate the time at box falls off>>
+concept("9614")
+<<Initial velocity is zero, then t = {t}>>
+_t = value.t
+<<Again using the second equation of motion, we can calculate distance travelled by the truck>>
+concept("9614")
+s1 = u*_t +  0.5*a*_t*_t
+<< distance travelled by truck before box fall off is {s1} \n>>

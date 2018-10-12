@@ -1,0 +1,25 @@
+
+question("Obtain the de-broglie wavelength associated with thermal neutrons at temperature {T}^o C. Given mass of neutron is 1.675 x 10^-27 kg, boltzmann constant k is 1.38 x 10^-23 J K^-1 and h is 6.63 x 10^-34 J s")
+ref("ISC Physics 12th,912,7")
+lm("4,12,45,195")
+chapter("Photoelectric Effect and Electromagnetic Waves")
+dl("4")
+it("90")
+type("Single Choice")
+concept("7351")
+
+T = choose(24, 100)
+#T is integer
+k = 1.38 * 10e-23
+m = 1.675 * 10e-27
+h = 6.63 * 10e-34
+<<Obtain the de-broglie wavelength associated with thermal neutrons at temperature {T}^o C. Given mass of neutron is 1.675 x 10^-27 kg, boltzmann constant k is 1.38 x 10^-23 J K^-1 and h is 6.63 x 10^-34 J s>>
+T1 = T + 273
+KE = (3/2) *k*T1
+<<Kinetic Energy of a thermal neutron at absolute temparature T is, K = 3/2 x k x T>>
+concept("10421")
+<<KE = {KE}>>
+solve DBWL using DBWL * DBWL = (h * h)/(2*m*KE)
+<<De-broglie wave length of the neutrons is, h/sqrt(2mkE)>>
+concept("7351")
+<< De-broglie wave length = {value.DBWL} \n>>

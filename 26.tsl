@@ -1,0 +1,20 @@
+
+question("Diameter of a steel ball is measured using a Vernier Calliper which has division of 0.1 cm on its main scale [MS] and 10 division of its Vernier scale [VS] match 9 divisions on the main scale. 1) MS={K} VS={L} 2) MS={K} VS={L+2} 3) MS={K} VS={L-2}. If the zero error is {M} cm, then mean corrected diameter is:")
+ref("EM0102072")
+lm("4,12,45,1017")
+chapter("Experimental Physics")
+dl("3")
+it("70")
+type("Single Choice")
+concept("8935")
+
+K = select(0.5, 0.6, 0.8, 1, 1.2, 1.5)
+L = select(3,4,5,6,7)
+M = select(-0.04,- 0.03, -0.02, -0.01, 0.01, 0.02, 0.03, 0.04)
+
+<<Diameter of a steel ball is measured using a Vernier Calliper which has division of 0.1 cm on its main scale [MS] and 10 division of its Vernier scale [VS] match 9 divisions on the main scale. 1) MS={K} VS={L} 2) MS={K} VS={L+2} 3) MS={K} VS={L-2}. If the zero error is {M} cm, then mean corrected diameter is>>
+<<L.C. of Vernier calipers = 1 main scale diameter / Total divisons vernier scale>>
+concept("8010")
+<<Required of Vernier calipers = M.S.R.+(L.C)×vsdivisions>>
+concept("8935")
+<<corrected diameter is {K+L*0.01 - M} cm\n>>

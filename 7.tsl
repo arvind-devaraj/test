@@ -1,0 +1,45 @@
+
+question("A cylindrical piece of cork of density {d1} of base area {A} and height {h} floats in a liquid of density {d2}. The cork is depressed slightly and then released. What is the time period {T} of cork which oscillates up and down in simple harmonic motion?")
+
+ref("NCERT solutions physics class 11th,394,18") 
+lm("4,12,40,165")
+chapter("Oscillations (SHM)")
+dl("6")
+it("130")
+type("Single Choice")
+concept("10017")
+
+d1 = choose(3000,8000)
+d2 = choose(900,2000)
+
+
+A = 3.14e-4 
+h = 0.50
+x = 0.1
+g = 9.8
+pi = 3.1415
+m1 = A*h*(d1)
+F =  A*x*(d2)*g
+
+<<A cylindrical piece of cork of density {d1} of base area {A} and height {h} floats in a liquid of density {d2}. The cork is depressed slightly and then released. What is the time period {T} of cork which oscillates up and down in simple harmonic motion>>
+
+<<Mass of cylindrical cork is Volume x Density>>
+<<In floating condition, the weight of the cylinder is just balanced by the upthrust of the liquid>>
+<<When cylindrical cork is displaced down by a depth x further then released it oscillates about its mean position>>
+concept("9984")
+<<Restoring force = weight of extra liquid displaced>>
+concept("11210")
+
+
+solve a using abs(F) = (m1)*a
+
+<<Restoring force = {F}>>
+
+solve w using a =  w*w*x
+<<In simple harmonic motion, Acceleration is directly proportional to negative of displacement>>
+concept("9987")
+<<We can find the angular frequency using a = -w*w*x>>
+solve T using T = 2*(pi)/w
+concept("10017")
+<< time period is {value.T} \n>>
+	

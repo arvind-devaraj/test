@@ -1,0 +1,20 @@
+
+question("A telephonic communication service is working at carrier frequency of {K} GHz. Only {L}% of it is utilize for transmission. How many telephonic channels can be transmitted simultaneously if each channel requires a bandwidth of {M} KHz")
+ref("EM0266653")
+lm("4,12,45,197")
+chapter("Semiconductors and Communication System")
+dl("3")
+it("40")
+type("Single Choice")
+concept("8410")
+
+K = select(5, 10, 15, 20, 25, 30, 50)
+L = select(5, 10, 15, 20)
+M = select(5, 10, 15, 20)
+# M≠K
+
+<<A telephonic communication service is working at carrier frequency of {K} GHz. Only {L}% of it is utilize for transmission. How many telephonic channels can be transmitted simultaneously if each channel requires a bandwidth of {M} KHz>>
+<<10% of 10GHz = n x 5 kHz, where n is number of channels >>
+concept("8410,8414")
+
+<< number of channels is {(L/100)*(K*10e9)/M*10e3} \n>>

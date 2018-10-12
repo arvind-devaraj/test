@@ -1,0 +1,20 @@
+
+question("de-Broglie wavelength of an electron accelerated by a voltage of {K} V is close to [Given charge of e = 1.6 * 10^ -19 C, me = 9.1 * 10^-31 Kg, and h = 6.6 * 10^- 34 Js]")
+ref("EM0102065")
+lm("4,12,45,191")
+chapter("Atomic Structure in Modern Physics")
+dl("4")
+it("90")
+type("Single Choice")
+concept("7353")
+
+K = select(50, 100, 150, 200, 250, 300, 350, 400, 450, 500)
+P = 6.6e-34
+<<de-Broglie wavelength of an electron accelerated by a voltage of {K} V is close to - [Given charge of e = 1.6 * 10^ -19 C, me = 9.1 * 10^-31 Kg, and h = 6.6 * 10^- 34 Js]>>
+Q = sqrt(2*9.1e-31*1.6e-19*K)
+<<De-Broglie wavelength λ in given by λ = h/p = h/sqrt(2mk), where k is kinetic energy>>
+concept("7353")
+<<kinetic energy k = q x V>>
+concept("7418")
+<< wavelength={P/Q}A \n>>
+

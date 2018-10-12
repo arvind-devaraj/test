@@ -1,0 +1,7 @@
+question("An object is dropped from a height h from the ground. Everytime it hits the ground if loses {K}% of its kinetic energy. The total distance covered as t tends to infinity is:")
+
+K = select(10, 20, 30, 40, 50, 60, 70)
+
+P = (1+((K/100)*(K/100)))/(1-((K/100)*(K/100)))
+
+<<{P}h>>

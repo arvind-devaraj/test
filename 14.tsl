@@ -1,0 +1,40 @@
+
+question("Two point charges of {Q1} uC and {Q2} uC are situated at distance of {D} metres from each other. Calculate the electric field and potential at a point mid-way between them. How much work will be done in bringing a charge if {Q3} uC from infinity to the midpoint P?")
+ref("ISC Physics 12th,98,4")
+lm("4,12,43,177")
+chapter("Electrostatics")
+dl("3")
+it("90")
+type("Single Choice")
+concept("7896")
+
+Q1 = choose(0.01,0.25)
+Q2 = choose(-0.01,-0.25)
+#Constraint: Q1 != Q2 != Q3
+Q3 = choose(0.01,0.25)
+D = choose(1,20)
+<<Two point charges of {Q1} uC and {Q2} uC are situated at distance of {D} metres from each other. Calculate the electric field and potential at a point mid-way between them. How much work will be done in bringing a charge if {Q3} uC from infinity to the midpoint P>>
+<<Electric field due to a point charge q at a distance r is, E = 1/(4(pi)(e0))*q/r^2 >>
+concept("10126")
+E1 = (9.0*10e9) * (Q1*10e-6)/((D/2)*(D/2))
+<<Electric field due to first charge, {E1}>>
+E2 =  (9.0*10e9) * (abs(Q2)*10e-6)/((D/2)*(D/2))
+<<Electric field due to first charge, {E2}>>
+E = E1 + E2
+<<Electric field is superposition of both E1 + E2 >>
+concept("10135")
+<<Potential due to charge q at a distance r can be calculated using, V = 1/(4(pi)(e0))*q/r>>
+concept("7891")
+V1 = (9.0 * 10e9) * (Q1*10e-6)/(D/2)
+<<Potential due to first charge is, {V1}>>
+V2 = -(9.0 * 10e9) * (abs(Q2)*10e-6)/(D/2)
+<<Potential due to second charge is, {V2}>>
+concept("7891")
+V = V1 + V2
+<<Potential due to both charges is V1 + V2, which is {V}>>
+W = Q3*V
+<<Work done in bringing a charge q from infinity to given point is, W = q x V>>
+concept("7896")
+<< work done is {W} \n>>
+
+

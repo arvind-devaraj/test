@@ -1,0 +1,40 @@
+
+question("An electric heater and bulb are rated {P1}W -220V and {P2}W -220V respectively, both are connected in series to 220V AC mains. Calculate the power consumed by the heater and bulb?")
+ref("ISC Physics book,231,5") 
+lm("4,12,43,180")
+chapter("Current Electricity")
+dl("3")
+it("90")
+type("Single Choice")
+concept("7714")
+
+P1 = choose(200,1500)
+#P1 should be multiple of 50
+P2 = choose(40,100)
+#P2 should be multiple of 10
+
+<<An electric heater and bulb are rated {P1}W -220V and {P2}W -220V respectively, both are connected in series to 220V AC mains. Calculate the power consumed by the heater and bulb>>
+
+<<The resistance of heater and bulb can be calculated using the relation, Power(P) = V^2/R>>
+concept("7714")
+V = 220
+R1 = V * V/(P1)
+<<Resistance of heater, {R1}>>
+R2 = V*V/(P2)
+<<Resistance of heater, {R2}>>
+<<Total resitance will be sum of resistances of bulb and heater, they are connected in series>>
+<< Total resistance in series is {R1+R2} >>
+
+concept("7728")
+I = V/(R1+R2)
+concept("7742")
+
+<<Current in the circuit is Voltage/total resistance, which is {I}>>
+
+<<Power consumed is, i^2 x Resistance>>
+concept("7714")
+PH = (I*I) * R1
+PB = (I*I) * R2
+<< power consumed by heater and bulb are {PH} and {PB} \n >>
+
+

@@ -1,0 +1,25 @@
+
+question("A string of mass {m} is under a tension of {T}. The length of the stretched string is {l}. If the transverse jerk is struck at one end of the string, how long does the disturbance take to reach the other end?")
+
+ref("NCERT solutions physics class 11th,425,1") 
+lm("4,12,41,170")
+chapter("Waves and Sound")
+dl("2")
+it("60")
+type("Single Choice")
+concept("11831")
+ 
+m = choose(1.0, 10.0)
+T = choose(100, 500)
+l = choose(10, 30)
+<<A string of mass {m} is under a tension of {T}. The length of the stretched string is {l}. If the transverse jerk is struck at one end of the string, how long does the disturbance take to reach the other end>>
+<<Velocity of transverse wave, v = sqrt(T/mu)>>
+concept("11831")
+k = m/ l
+<<Calculate mass per unit length mu = mass/length>>
+<<mu = {k}>>
+solve v using v*v = T / k
+t = l / value.v
+<<Time taken by disturbance to reach the other end, t = l/v>>
+<< time taken = {t} \n>>
+

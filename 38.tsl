@@ -1,0 +1,24 @@
+question("In a screw gauge, {K} complete rotations of the screw cause it to move a linear distance of {L} cm. There are 100 circular scale divisions. The thickness of a wire measured by this screw gauge gives a reading of {M} main scale division and {N} circular scale divisions. Assuming negligible zero error, the thickness of the wire is:")
+
+ref("EM0304950")
+lm("4,12,39,154")
+chapter("Units and Dimensions")
+dl("4")
+it("60")
+type("Single Choice")
+concept("8934")
+
+K = select(4, 5, 6, 7, 8)
+L = select(0.2, 0.25, 0.3, 0.4 ,0.5)
+M = select(3, 4, 5, 6, 7)
+N = select(20, 30, 40, 50)
+<<In a screw gauge, {K} complete rotations of the screw cause it to move a linear distance of {L} cm. There are 100 circular scale divisions. The thickness of a wire measured by this screw gauge gives a reading of {M} main scale division and {N} circular scale divisions. Assuming negligible zero error, the thickness of the wire is>>
+<<Least count = pitch / no of division on circular scale>>
+concept("8010")
+<<L.C = {L}/({K}*100) cm>>
+<<Total reading  = Main scale reading (a) mm + ( n*L.C ) mm, P.S.R = Pitch scale reading , n= Corrected Head scale reading , L.C = Least count>>
+concept("8934")
+
+S = (L/K)*M + N*(L/K*100)
+<<Total reading, S = ({L}/{K})*{M} + {N}*({L}/{K}*100)>>
+<< S = {S} cm >>

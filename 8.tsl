@@ -1,0 +1,27 @@
+
+question("A bullet of mass {m} and speed {v} is fired into a door and gets embedded exactly at the centre of the door. The door is {l} wide and weight {M}. It is hinged at one end and rotates about a vertical axis practically without friction. Find the angular speed of the door just after the bullet embeds into it")
+
+ref("NCERT solutions physics class 11th,216,24") 
+lm("4,12,40,163")
+chapter("Rotational Motion")
+dl("3")
+it("90")
+type("Single Choice")
+concept("10256")
+ 
+M = choose(10, 12)
+l = choose(0.8, 1.2)
+m =  0.02
+v = choose(300, 800)
+r = I/2
+L = m*v*r
+ 
+<< A bullet of mass {m} and speed {v} is fired into a door and gets embedded exactly at the centre of the door. The door is {l} wide and weight {M}. It is hinged at one end and rotates about a vertical axis practically without friction. Find the angular speed of the door just after the bullet embeds into it>>
+<<As bullet gets embedded exactly at the centre of the door, therefore it's distance from the hinged end of the door is width/2>>
+solve omega using L = I*omega
+concept("10305")
+<<Angular momentum can be calculated by L = mvr>>
+concept("10256")
+<<L = {L} J-s>>
+<<Solve for angular speed using L = l x omega>>
+<< angular speed = {value.omega} \n>>

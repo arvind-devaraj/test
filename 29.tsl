@@ -1,0 +1,20 @@
+
+question("In an a.c. circuit, the instantaneous e.m.f and current given by  e = {K} sin{L}t r = {M} sin ({L}t - {N}) In one cycle of a.c., the average power consumed by the circuit is:")
+ref("EM0266651")
+lm("4,12,43,182")
+chapter("Electromagnetic Induction and Alternating Current")
+dl("4")
+it("60")
+type("Single Choice")
+concept("9054")
+
+K = select(50, 60, 80, 100, 120, 150, 180, 200)
+L = select(10, 20, 30, 40, 50)
+M = select(10, 20, 30, 40)
+pi = 3.1415
+N = select(pi/6, pi/4, pi/3)
+
+<<In an a.c. circuit, the instantaneous e.m.f and current given by  e = {K} sin{L}t r = {M} sin ({L}t - {N}) In one cycle of a.c., the average power consumed by the circuit is>>
+<<Average power = Vrms x Irms x cosϕ >>
+concept("9054,8999")
+<< power is {0.5*K*L*cos(N)} \n >>

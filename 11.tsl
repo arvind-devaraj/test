@@ -1,0 +1,50 @@
+
+question("Each of the two charged metallic spheres of radii {r1} cm and {r2} cm has +{q} uC of charge . They are connected by wire. Find the common potential and final charge on each sphere. What is the amount of charge transferred through the wire? ")
+
+ref("ISC Physics book,148,2") 
+lm("4,12,43,177")
+chapter("Electrostatics")
+dl("3")
+it("90")
+type("Single Choice")
+concept("7846")
+
+r1 = choose(5, 20)
+r1 = r1/100
+r2 = choose(5,20)
+r2 = r2/100
+#Constraint: r1 != r2
+
+pi = 3.1415
+e0 = 8.854e-12
+q = choose(50, 500)
+q = q * 10e-6
+
+<<Each of the two charged metallic spheres of radii {r1} cm and {r2} cm has +{q} uC of charge . They are connected by wire. Find the common potential and final charge on each sphere. What is the amount of charge transferred through the wire>>
+
+
+C1 = 4*(pi)*(e0)*r1
+<<Capacitance of the first charged sphere, C1 = 4*(pi)*(e0)*a1>>
+concept("7851")
+<<C1 = {C1} F>>
+C2 = 4*(pi)*(e0)*r2
+<<Capacitance of the second charged sphere, C2 = 4*(pi)*(e0)*a2>>
+concept("7851")
+<<C2 = {C2} F>>
+Q1 = q
+Q2 = q
+<<Common potential, V = (Q1+Q2)/(C1 + C2)>>
+V = (Q1+Q2)/(C1 + C2)
+<< Common potential {V} >>
+
+q1 = C1 * V
+q2 = C2 * V
+<<New charge on the first sphere q1, C1 * V>>
+concept("7946")
+<<q1 = {q1}>>
+<<New charge on the second sphere q2, C2 * V>>
+concept("7946")
+<<q2 = {q2}>>
+deltaQ = abs(Q1-q1)
+<<Amount of charge transferred through wire {deltaQ} \n>>
+

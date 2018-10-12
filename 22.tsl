@@ -1,0 +1,17 @@
+
+question("Three Capacitors each of {K} µF are to be connected is such a way that the effective capacitance is {L}. This can be done by connecting them:")
+ref("EM0135539")
+lm("4,12,43,177")
+chapter("Electrostatics")
+dl("2")
+it("60")
+type("Single Choice")
+concept("7864")
+
+K=select(3, 4, 5, 6, 7, 8, 9,10)
+L = K/2+K
+
+<< Three Capacitors each of {K} µF are to be connected is such a way that the effective capacitance is {L}. This can be done by connecting them >>
+
+<< Two in series and one in Parallel \n >>
+concept("7864")
